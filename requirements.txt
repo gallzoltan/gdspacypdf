@@ -1,0 +1,7 @@
+# requirements.txt
+pdfplumber==0.10.3
+regex==2023.12.25
+nltk==3.8.1
+huspacy
+jinja2==3.1.3
+python-dotenv==1.0.1
