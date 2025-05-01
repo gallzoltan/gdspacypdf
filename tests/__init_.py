@@ -1,0 +1,3 @@
+"""
+Tesztmodul a gdspacypdf csomaghoz.
+"""

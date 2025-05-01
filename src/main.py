@@ -1,9 +1,9 @@
 import argparse
 import os
-from pdf_processor import extract_text_from_pdf
-from resolution_extractor import extract_resolutions
-from resolution_analyzer import analyze_resolutions
-from email_sender import send_email_summary
+from .pdf.pdf_processor import extract_text_from_pdf
+from .resolutions.extractor import extract_resolutions
+from .resolutions.analyzer import analyze_resolutions
+from .notification.email_sender import send_email_summary
 
 def main():
     parser = argparse.ArgumentParser(description='PDF kormányhatározat feldolgozó')
