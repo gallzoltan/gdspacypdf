@@ -3,8 +3,7 @@
 pip install -e .
 ```
 
-Ezután a `gdspacypdf` parancs közvetlenül használható lesz a terminálban:
-
 ```bash
+# futtató parancs a terminálban:
 gdspacypdf samples/MK_25_026.pdf --analyze
 ```
