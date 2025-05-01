@@ -17,11 +17,23 @@ def analyze_resolutions(resolutions):
     Kormányhatározatok elemzése önkormányzati vonatkozású tartalom szempontjából.
     """
     # Keresendő kulcsszavak
+    # keywords = [
+    #     "önkormányzat", "települési önkormányzat", "helyi önkormányzat",
+    #     "önkormányzati", "település", "települési", "város", "városi",
+    #     "kerület", "kerületi", "polgármester", "képviselő-testület",
+    #     "IX. Helyi önkormányzatok támogatásai fejezet"
+    # ]
+
     keywords = [
-        "önkormányzat", "települési önkormányzat", "helyi önkormányzat",
-        "önkormányzati", "település", "települési", "város", "városi",
-        "kerület", "kerületi", "polgármester", "képviselő-testület",
-        "IX. Helyi önkormányzatok támogatásai fejezet"
+        "ix. helyi önkormányzatok",
+        "települési önkormányzatok", 
+        "önkormányzatok adósságot keletkeztető",
+        "gazdasági társaságok adósságot keletkeztető",
+        # Kibővített keresés - szemantikailag hasonló kifejezések
+        "helyi önkormányzat",
+        "önkormányzati adósság",
+        "önkormányzati hitelfelvétel",
+        "adósságot keletkeztető ügyletek"
     ]
     
     relevant_resolutions = []

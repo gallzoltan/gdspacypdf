@@ -36,12 +36,12 @@ def main():
         results = analyze_resolutions(resolutions)
         print(f"{len(results['relevant_resolutions'])} releváns kormányhatározat található.")
         for res in results['relevant_resolutions']:
-            print(f"Releváns kormányhatározat: {res['resolution']['title']}")
-            # print(f"Összefoglaló: {res['summary']}")
+            print(f"Releváns kormányhatározat: {res['resolution']['title']}")            
             print(f"Relevancia pontszám: {res['relevance_score']}")
             print("Kulcsszó találatok:")
             for match in res['keyword_matches']:
                 print(f"- Kulcsszó: {match['keyword']}, Cím találatok: {match['title_count']}, Tartalom találatok: {match['content_count']}")
+            print(f"Összefoglaló: {res['summary']}")
         
         # Email küldése, ha kérték
         if args.email and results['relevant_resolutions']:
