@@ -15,25 +15,19 @@ except:
 def analyze_resolutions(resolutions):
     """
     Kormányhatározatok elemzése önkormányzati vonatkozású tartalom szempontjából.
+    A címben való előfordulás kétszeres súlyt kap
     """
-    # Keresendő kulcsszavak
-    # keywords = [
-    #     "önkormányzat", "települési önkormányzat", "helyi önkormányzat",
-    #     "önkormányzati", "település", "települési", "város", "városi",
-    #     "kerület", "kerületi", "polgármester", "képviselő-testület",
-    #     "IX. Helyi önkormányzatok támogatásai fejezet"
-    # ]
 
     keywords = [
         "ix. helyi önkormányzatok",
         "települési önkormányzatok", 
         "önkormányzatok adósságot keletkeztető",
         "gazdasági társaságok adósságot keletkeztető",
-        # Kibővített keresés - szemantikailag hasonló kifejezések
         "helyi önkormányzat",
         "önkormányzati adósság",
         "önkormányzati hitelfelvétel",
-        "adósságot keletkeztető ügyletek"
+        "adósságot keletkeztető ügyletek",
+        "iparűzési adó"
     ]
     
     relevant_resolutions = []
@@ -54,10 +48,8 @@ def analyze_resolutions(resolutions):
                     'content_count': content_matches
                 })
                 relevance_score += (title_matches * 2) + content_matches
-        
-        # Ha van releváns találat, készítünk egy összefoglalót
+                
         if relevance_score > 0:
-            # Szöveg feldolgozása NLP segítségével a jobb összefoglaló érdekében
             doc = nlp(resolution['content'])
             
             # Egyszerű összefoglaló készítése: az első pár mondat

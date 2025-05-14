@@ -8,12 +8,12 @@ def extract_text_from_pdf(pdf_path):
     full_text = ""
     try:
         with pdfplumber.open(pdf_path) as pdf:
-            print(f"PDF oldalak száma: {len(pdf.pages)}")
+            # print(f"PDF oldalak száma: {len(pdf.pages)}")
             for i, page in enumerate(pdf.pages):
                 text = page.extract_text()
                 if text:
                     full_text += text + "\n"
-                print(f"  - {i+1}. oldal: {len(text) if text else 0} karakter")
+                # print(f"  - {i+1}. oldal: {len(text) if text else 0} karakter")
         
         # Némi tisztítás a szövegen
         # Töröljük a túl sok whitespace-t
